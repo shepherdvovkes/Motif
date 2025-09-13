@@ -1,0 +1,52 @@
+;; MOTIF Program: Simple Love Song
+;; Target HCR: Universal Human Consciousness
+;; Goal: Create a simple love song with verse and chorus
+;; Structure: Verse-Chorus-Verse-Chorus
+
+(define-context simple-love-context
+    (cultural-background universal)
+    (emotional-theme romantic-love)
+    (temporal-context timeless))
+
+;; Core archetypes for love
+(define-archetype heart (emotional-weight 0.9) (cultural-context universal))
+(define-archetype sky (emotional-weight 0.7) (cultural-context universal))
+(define-archetype stars (emotional-weight 0.8) (cultural-context universal))
+
+;; Metaphors for love
+(define-metaphor heart-sky
+    (source heart)
+    (target sky)
+    (emotional-multiplier 1.3)
+    (cultural-resonance high))
+
+;; Verse motif - setting the romantic scene
+(define-motif verse-love
+    (archetypes (heart sky))
+    (metaphors (heart-sky))
+    (emotional-target love)
+    (intensity 0.7)
+    (repetition-pattern gentle))
+
+;; Chorus motif - the emotional peak
+(define-motif chorus-love
+    (archetypes (stars heart))
+    (metaphors (heart-sky))
+    (emotional-target passion)
+    (intensity 0.9)
+    (repetition-pattern building))
+
+;; Main leitmotif
+(define-leitmotif love-theme
+    (motifs (verse-love chorus-love))
+    (repetition infinite)
+    (emotional-progression building))
+
+;; The complete composition
+(define-composition simple-love-song
+    (leitmotif love-theme)
+    (structure verse-chorus-verse-chorus)
+    (target-emotion romantic-love))
+
+;; Compose and execute the song
+(compose simple-love-song)

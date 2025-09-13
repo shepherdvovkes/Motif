@@ -1,0 +1,106 @@
+;; MOTIF Program: Love and Loss Song
+;; Target HCR: Universal Human Consciousness
+;; Goal: Create a song about the bittersweet nature of love and loss
+;; Structure: Verse-Chorus-Bridge-Verse-Chorus-Outro
+
+(define-context love-loss-context
+    (cultural-background universal-contemporary)
+    (emotional-theme romantic-loss)
+    (temporal-context timeless)
+    (target-emotion bittersweet-nostalgia))
+
+;; Core archetypes for love and loss
+(define-archetype heart (emotional-weight 0.9) (cultural-context universal))
+(define-archetype ocean (emotional-weight 0.8) (cultural-context universal))
+(define-archetype autumn (emotional-weight 0.7) (cultural-context seasonal))
+(define-archetype photograph (emotional-weight 0.8) (cultural-context universal))
+(define-archetype moonlight (emotional-weight 0.7) (cultural-context universal))
+(define-archetype goodbye (emotional-weight 0.9) (cultural-context universal))
+
+;; Metaphors that bridge emotional concepts
+(define-metaphor heart-ocean
+    (source heart)
+    (target ocean)
+    (emotional-multiplier 1.4)
+    (cultural-resonance very-high)
+    (meaning "love as vast and deep as the sea"))
+
+(define-metaphor autumn-love
+    (source autumn)
+    (target love)
+    (emotional-multiplier 1.3)
+    (cultural-resonance high)
+    (meaning "love that changes and fades like autumn leaves"))
+
+(define-metaphor fading-photograph
+    (source photograph)
+    (target memory)
+    (emotional-multiplier 1.5)
+    (cultural-resonance very-high)
+    (meaning "memories that slowly fade but never disappear"))
+
+(define-metaphor moonlight-promises
+    (source moonlight)
+    (target promises)
+    (emotional-multiplier 1.2)
+    (cultural-resonance medium)
+    (meaning "promises made under romantic moonlight"))
+
+;; Verse motif - setting the scene
+(define-motif verse-scene
+    (archetypes (photograph moonlight autumn))
+    (metaphors (fading-photograph moonlight-promises))
+    (emotional-target nostalgia)
+    (intensity 0.6)
+    (repetition-pattern gentle)
+    (texture "soft, contemplative"))
+
+;; Chorus motif - the emotional core
+(define-motif chorus-core
+    (archetypes (heart ocean goodbye))
+    (metaphors (heart-ocean))
+    (emotional-target profound-loss)
+    (intensity 0.9)
+    (repetition-pattern building)
+    (texture "powerful, cathartic"))
+
+;; Bridge motif - the turning point
+(define-motif bridge-transition
+    (archetypes (autumn heart))
+    (metaphors (autumn-love))
+    (emotional-target acceptance)
+    (intensity 0.7)
+    (repetition-pattern single)
+    (texture "reflective, wise"))
+
+;; Outro motif - resolution
+(define-motif outro-resolution
+    (archetypes (photograph moonlight))
+    (metaphors (fading-photograph))
+    (emotional-target peaceful-melancholy)
+    (intensity 0.5)
+    (repetition-pattern fading)
+    (texture "gentle, fading"))
+
+;; Main leitmotif that weaves everything together
+(define-leitmotif love-loss-theme
+    (motifs (verse-scene chorus-core bridge-transition outro-resolution))
+    (repetition infinite)
+    (emotional-progression building-climax-resolution)
+    (context-dependency love-loss-context))
+
+;; Conditional emotional logic
+(if-emotional-state
+    (listener-state fresh-grief)
+    (execute-motif chorus-core)
+    (execute-motif verse-scene))
+
+;; The complete composition
+(define-composition love-and-loss-song
+    (leitmotif love-loss-theme)
+    (structure verse-chorus-bridge-verse-chorus-outro)
+    (target-emotion bittersweet-catharsis)
+    (context-optimization love-loss-context))
+
+;; Compose and execute the song
+(compose love-and-loss-song)

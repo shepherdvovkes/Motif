@@ -1,0 +1,101 @@
+;; MOTIF Program: А и Б сидели на трубе
+;; Простой пример абсурдистского математического стихотворения
+;; Генерирует точный текст с математическими концепциями
+
+(define-context russian-childhood
+    (cultural-background russian)
+    (emotional-theme playful-absurdity)
+    (target-emotion amused-confusion))
+
+;; Основные персонажи и объекты
+(define-archetype A (emotional-weight 0.8) (cultural-context russian-childhood))
+(define-archetype B (emotional-weight 0.8) (cultural-context russian-childhood))
+(define-archetype pipe (emotional-weight 0.7) (cultural-context russian-childhood))
+
+;; Математические концепции
+(define-archetype x-squared (emotional-weight 0.9) (cultural-context mathematical))
+(define-archetype exponential (emotional-weight 0.9) (cultural-context mathematical))
+
+;; Временные концепции
+(define-archetype yesterday (emotional-weight 0.6) (cultural-context temporal))
+(define-archetype long-time (emotional-weight 0.6) (cultural-context temporal))
+
+;; Характеристики
+(define-archetype unshaven (emotional-weight 0.7) (cultural-context masculine))
+(define-archetype brutal (emotional-weight 0.8) (cultural-context masculine))
+
+;; Мотивы для каждой строки стихотворения
+(define-motif line1
+    (archetypes (A B pipe))
+    (emotional-target playful-nostalgia)
+    (text-content "А и Б сидели на трубе"))
+
+(define-motif line2
+    (archetypes (A long-time))
+    (emotional-target stability)
+    (text-content "А сидел уже давно и плотно"))
+
+(define-motif line3
+    (archetypes (B yesterday))
+    (emotional-target dynamic-change)
+    (text-content "Б подсел только вчера"))
+
+(define-motif line4
+    (archetypes (B x-squared))
+    (emotional-target mathematical-absurdity)
+    (text-content "Но плотнее А на Икс в квадрате"))
+
+(define-motif line5
+    (archetypes (x-squared))
+    (emotional-target mathematical-awe)
+    (text-content "На Икс в квадрате"))
+
+(define-motif line6
+    (archetypes (exponential))
+    (emotional-target mathematical-intensity)
+    (text-content "экспоненциален"))
+
+(define-motif line7
+    (archetypes (x-squared))
+    (emotional-target mathematical-repetition)
+    (text-content "Икс в квадрате"))
+
+(define-motif line8
+    (archetypes (unshaven brutal))
+    (emotional-target absurd-humor)
+    (text-content "не брит и брутален"))
+
+(define-motif line9
+    (archetypes (exponential))
+    (emotional-target escalating-intensity)
+    (text-content "экспоненциален"))
+
+(define-motif repetition1
+    (archetypes (exponential))
+    (emotional-target escalating-intensity)
+    (text-content "экспоненциален"))
+
+(define-motif repetition2
+    (archetypes (exponential))
+    (emotional-target escalating-intensity)
+    (text-content "экспоненциален"))
+
+(define-motif repetition3
+    (archetypes (exponential))
+    (emotional-target escalating-intensity)
+    (text-content "экспоненциален"))
+
+;; Основная тема, объединяющая все мотивы
+(define-leitmotif main-theme
+    (motifs (line1 line2 line3 line4 line5 line6 line7 line8 line9 repetition1 repetition2 repetition3))
+    (repetition single)
+    (emotional-progression building-absurd))
+
+;; Финальная композиция
+(define-composition absurdist-poem
+    (leitmotif main-theme)
+    (structure verse-repetition)
+    (target-emotion amused-mathematical-confusion))
+
+;; Выполнить композицию
+(compose absurdist-poem)

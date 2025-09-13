@@ -1,0 +1,18 @@
+# MOTIF Language Requirements
+# Core dependencies for the MOTIF programming language
+
+# PyInstaller for creating standalone binaries
+pyinstaller>=5.0.0
+
+# Standard library dependencies (included with Python 3.8+)
+# - re (regex operations)
+# - typing (type hints)
+# - dataclasses (data structures)
+# - enum (enumerations)
+# - ast (abstract syntax trees)
+
+# Natural Language Processing for song analysis
+nltk>=3.8
+
+# No external dependencies required for basic MOTIF functionality
+# The parser and interpreter are self-contained

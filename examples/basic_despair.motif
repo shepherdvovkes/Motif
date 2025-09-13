@@ -1,0 +1,35 @@
+;; MOTIF Program: Basic Despair
+;; Target HCR: Universal Human Consciousness
+;; Goal: Induce profound melancholy through archetypal imagery
+
+(define-archetype night (emotional-weight 0.9) (cultural-context universal))
+(define-archetype street (emotional-weight 0.7) (cultural-context urban-20th-century))
+(define-archetype light (emotional-weight 0.6) (cultural-context universal))
+(define-archetype pharmacy (emotional-weight 0.8) (cultural-context urban-modern))
+
+(define-metaphor meaningless-light
+    (source light)
+    (target meaninglessness)
+    (emotional-multiplier 1.3)
+    (cultural-resonance high))
+
+(define-motif core-assertion
+    (archetypes (night street light pharmacy))
+    (metaphors (meaningless-light))
+    (emotional-target melancholy)
+    (intensity 0.9)
+    (repetition-pattern cyclic))
+
+(define-leitmotif main-loop
+    (motifs (core-assertion))
+    (repetition infinite)
+    (emotional-progression static)
+    (context-dependency universal))
+
+(define-composition despair
+    (leitmotif main-loop)
+    (structure single-motif)
+    (target-emotion profound-melancholy)
+    (context-optimization universal))
+
+(compose despair)

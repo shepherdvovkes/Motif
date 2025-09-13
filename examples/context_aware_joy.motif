@@ -1,0 +1,73 @@
+;; MOTIF Program: Context-Aware Joy
+;; Target HCR: Post-Pandemic Global Consciousness
+;; Goal: Generate uplifting emotional response considering current global context
+
+(define-context post-pandemic-context
+    (cultural-background global-contemporary)
+    (political-climate post-crisis-recovery)
+    (temporal-context 2024)
+    (social-mood cautious-optimism)
+    (current-events (recovery resilience hope)))
+
+(define-archetype light (emotional-weight 0.9) (cultural-context universal))
+(define-archetype dawn (emotional-weight 0.8) (cultural-context universal))
+(define-archetype dance (emotional-weight 0.7) (cultural-context universal))
+(define-archetype freedom (emotional-weight 0.9) (cultural-context post-pandemic))
+
+(define-metaphor breaking-dawn
+    (source dawn)
+    (target hope)
+    (emotional-multiplier 1.5)
+    (cultural-resonance very-high)
+    (context-relevance post-pandemic))
+
+(define-metaphor dancing-light
+    (source dance)
+    (target light)
+    (emotional-multiplier 1.3)
+    (cultural-resonance high))
+
+(define-motif hope-core
+    (archetypes (light dawn))
+    (metaphors (breaking-dawn))
+    (emotional-target hope)
+    (intensity 0.8)
+    (repetition-pattern building))
+
+(define-motif celebration-bridge
+    (archetypes (dance freedom))
+    (metaphors (dancing-light))
+    (emotional-target joy)
+    (intensity 0.9)
+    (repetition-pattern explosive))
+
+(define-leitmotif main-theme
+    (motifs (hope-core celebration-bridge))
+    (repetition infinite)
+    (emotional-progression building-climax)
+    (context-dependency post-pandemic-context))
+
+;; Conditional emotional logic based on listener state
+(if-emotional-state
+    (listener-state melancholy)
+    (execute-motif hope-core)
+    (execute-motif celebration-bridge))
+
+;; Iterative emotional building
+(while-emotional-state
+    (intensity < 0.9)
+    (increase-emotional-intensity joy 0.1)
+    (apply-metaphor breaking-dawn)
+    (wait-for-impact 2000))
+
+(define-composition context-joy
+    (leitmotif main-theme)
+    (structure verse-chorus-bridge-chorus-outro)
+    (target-emotion profound-joy)
+    (context-optimization post-pandemic-context)
+    (conditional-logic true))
+
+;; Predict emotional triggers for current context
+(predict-emotional-triggers joy post-pandemic-context)
+
+(compose context-joy)

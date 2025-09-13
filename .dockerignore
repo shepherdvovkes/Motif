@@ -1,0 +1,46 @@
+# Docker ignore file for MOTIF build
+# Exclude unnecessary files from Docker context
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Documentation (optional, uncomment if you want to exclude)
+# *.md
+# docs/
+
+# Test files (optional, uncomment if you want to exclude)
+# test_*.py
+# *test.py
+
+# Build scripts
+build.sh
+test_binary.sh

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# MOTIF Docker wrapper script
+# Usage: ./motif <script.motif>
+
+if [ $# -eq 0 ]; then
+    echo "Usage: ./motif <script.motif>"
+    echo "       ./motif --help"
+    exit 1
+fi
+
+# Get the directory of the current script
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Run the motif script via Docker
+docker run --rm \
+    -v "$SCRIPT_DIR:/workspace" \
+    -w /app \
+    motif python3 motif_cli.py "$@"
